@@ -276,18 +276,20 @@ public class X509Certificate: CustomStringConvertible {
     private func blockDistinguishedName(block: ASN1Object) -> String {
         var result = ""
         let oidNames = [
-            ["2.5.4.3",  "CN"],           // commonName
-            ["2.5.4.46", "DNQ"],          // dnQualifier
-            ["2.5.4.5",  "SERIALNUMBER"], // serialNumber
-            ["2.5.4.42", "GIVENNAME"],    // givenName
-            ["2.5.4.4",  "SURNAME"],      // surname
-            ["2.5.4.11", "OU"],           // organizationalUnitName
-            ["2.5.4.10", "O"],            // organizationName
-            ["2.5.4.9",  "STREET"],       // streetAddress
-            ["2.5.4.7",  "L"],            // localityName
-            ["2.5.4.8",  "ST"],           // stateOrProvinceName
-            ["2.5.4.6",  "C"],            // countryName
-            ["1.2.840.113549.1.9.1", "E"] // e-mail
+            ["2.5.4.3", "CN"],
+            ["2.5.4.4", "SN"],
+            ["2.5.4.6", "C"],
+            ["2.5.4.7", "L"],
+            ["2.5.4.8", "S"],
+            ["2.5.4.9", "STREET"],
+            ["2.5.4.10", "O"],
+            ["2.5.4.11", "OU"],
+            ["2.5.4.12", "T"],
+            ["2.5.4.42", "G"],
+            ["1.2.643.100.1", "OGRN"],
+            ["1.2.643.100.3", "SNILS"],
+            ["1.2.643.131.1.1", "INN"],
+            ["1.2.840.1135.49.1.9.1", "E"]
         ]
         for oidName in oidNames {
             if let oidBlock = block.findOid(oidName[0]) {
