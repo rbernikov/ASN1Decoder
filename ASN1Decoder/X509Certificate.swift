@@ -288,7 +288,7 @@ public class X509Certificate: CustomStringConvertible {
             ["2.5.4.42", "G"],
             ["1.2.643.100.1", "OGRN"],
             ["1.2.643.100.3", "SNILS"],
-            ["1.2.643.131.1.1", "INN"],
+            ["1.2.643.3.131.1.1", "INN"],
             ["1.2.840.1135.49.1.9.1", "E"]
         ]
         for oidName in oidNames {
